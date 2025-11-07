@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;600&display=swap');
+
+*{box-sizing:border-box}
+
+:root{
+	/* Dark blue background with cream cards */
+	--bg:#071640; /* deep navy */
+	--card:#b5cde4; /* cream */
+	/* input interior color: change here to match attachment (deep blue) */
+	--input-bg: #1848c7; /* deep royal blue for input fill */
+	--input-text: #a5c9e9; /* text color inside inputs */
+	--muted:#f2f5fa; /* muted slate for labels */
+	--accent:#850a0a; /* cream accent (used on panels) */
+	--accent-2:#d40e0e; /* lighter cream */
+	--panel-border:rgba(237, 90, 17, 0.12);
+	--text:#05223a; /* dark navy text for contrast on cream */
+	--btn-bg:#07131f; /* strong blue for buttons */
+}
+
+body{margin:0;background:linear-gradient(180deg,var(--bg),#02112a);color:var(--card);font-family:'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto}
+.container{max-width:1100px;margin:28px auto;padding:22px;background:transparent}
+.app-shell{background:transparent;border-radius:12px;padding:18px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.app-title{display:flex;gap:12px;align-items:center}
+.logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:var(--text);font-weight:700}
+.header h1{margin:0;font-size:20px;font-weight:700;font-family:'Montserrat', 'Poppins', sans-serif;color:var(--card)}
+.header p{margin:0;color:var(--card);font-size:13px}
+
+.grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
+.main-panel{padding:18px;border-radius:10px;background:var(--card);border:1px solid var(--panel-border);box-shadow:0 10px 30px rgba(2,8,23,0.25)}
+.side-panel{padding:16px;border-radius:10px;background:var(--card);border:1px solid var(--panel-border);box-shadow:0 8px 20px rgba(2,8,23,0.18)}
+
+/* New layout to match reference: left navigation + centered content card */
+.app-layout{display:flex;min-height:72vh}
+.sidebar{width:220px;background:#0f2546;border-radius:8px;padding:20px;color:#fff;margin-right:20px}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.brand .logo{width:40px;height:40px;border-radius:8px;background:#fff;color:#0f2546;display:flex;align-items:center;justify-content:center;font-weight:700}
+.brand h3{margin:0;font-size:18px}
+.nav{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.nav-item{padding:10px 12px;border-radius:6px;color:#c7d0e0;cursor:pointer}
+.nav-item.active{background:#2b6be6;color:#fff;font-weight:600}
+.main-area{flex:1}
+.content-header{display:flex;flex-direction:column;gap:12px;margin-bottom:12px}
+.content-header h2{margin:0;color:#11334f}
+.search{width:100%;padding:10px;border-radius:6px;border:1px solid #d7dde6}
+.table-card{background:transparent;border-radius:8px;padding:0}
+.table-wrap{background:var(--card);padding:18px;border-radius:8px}
+.table-header{background:#2b6be6;color:#fff;padding:12px;border-radius:6px 6px 0 0;font-weight:700}
+.data-table{width:100%;border-collapse:collapse}
+.data-table th,.data-table td{padding:12px;border-bottom:1px solid #eef2f6;text-align:left;color:var(--text)}
+.data-table th{background:#2b6be6;color:#fff}
+.data-row{background:#fff;border-radius:6px}
+.right-card{margin-top:12px}
+.panel-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.panel{padding:12px;border-radius:8px;background:linear-gradient(180deg,var(--card),var(--accent-2));border:1px solid rgba(2,8,23,0.04);box-shadow:0 6px 18px rgba(2,8,23,0.06)}
+.panel h3{margin:0;font-size:13px;color:var(--text)}
+
+.field{display:flex;flex-direction:column;margin-bottom:10px}
+.field label{font-size:13px;margin-bottom:6px;color:var(--muted)}
+.field input, .field select, textarea{padding:10px;border:1px solid #fdfcfc;border-radius:8px;background:var(--card);color:var(--text)}
+.field input, .field select, textarea{
+	padding:12px 14px;
+	border-radius:12px;
+	background:var(--input-bg);
+	color:var(--input-text);
+	border:2px solid rgba(255,255,255,0.92);
+	box-shadow: inset 0 -6px 12px rgba(0,0,0,0.12);
+}
+.btn{padding:10px 14px;border:none;background:var(--btn-bg);color:var(--card);border-radius:8px;cursor:pointer;font-weight:600;font-family:'Montserrat',sans-serif}
+.btn.secondary{background:rgba(0,0,0,0.12);color:var(--card)}
+.small{font-size:13px;color:var(--muted)}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:10px;border-bottom:1px solid #f6f0ea;text-align:left}
+.link{color:var(--accent);cursor:pointer}
+
+.muted{color:var(--muted)}
+.stack{display:flex;flex-direction:column;gap:8px}
+.cta-row{display:flex;gap:10px}
+
+.entity-list{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.entity-item{padding:10px;border-radius:8px;background:var(--card);border:1px solid rgba(2,8,23,0.04);cursor:pointer;font-weight:600;color:var(--text)}
+
+.side-section{margin-bottom:14px}
+.quick-action{display:flex;gap:8px;flex-wrap:wrap}
+.quick-action .btn{padding:8px 10px;font-size:13px}
+
+@media (max-width:980px){
+	.grid{grid-template-columns:1fr}
+	.panel-row{grid-template-columns:repeat(2,1fr)}
+}
+
+/* Sign-in pattern: centered card with soft polka dots on a warm cream */
+.signin-hero{
+	min-height:100vh; /* full screen login */
+	display:flex;align-items:center;justify-content:center;padding:40px 20px;
+	background: linear-gradient(180deg,var(--bg),#02112a);
+	background-image: linear-gradient(135deg, rgba(0,0,0,0.03) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.03) 50%, rgba(0,0,0,0.03) 75%, transparent 75%, transparent), linear-gradient(90deg, rgba(0,0,0,0.02), rgba(0,0,0,0.02));
+}
+.signin-card{
+	width:760px;max-width:96%;background:var(--card);color:var(--text);border-radius:12px;padding:28px 30px;box-shadow:0 24px 60px rgba(2,8,23,0.36);border:1px solid rgba(2,8,23,0.08);
+}
+
+/* Landing page styles */
+.landing-hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 20px;background:linear-gradient(180deg,var(--bg),#02112a)}
+.landing-card{width:820px;max-width:94%;background:var(--card);padding:30px;border-radius:14px;box-shadow:0 30px 80px rgba(2,8,23,0.5);border:1px solid rgba(2,8,23,0.06);color:var(--text)}
+.landing-logo{width:72px;height:72px;border-radius:16px;background:linear-gradient(180deg,#ff5252,#b30000);display:grid;place-items:center;box-shadow:0 8px 20px rgba(2,8,23,0.15);margin-right:12px}
+
+/* Logo animation: pop on entrance, gentle float ongoing */
+.landing-logo{animation: float 3.5s ease-in-out 0.6s infinite}
+.landing-logo svg{width:48px;height:48px;display:block;animation: pop .45s cubic-bezier(.2,.9,.2,1) 0s 1 both}
+
+/* hover: subtle scale + shadow pulse */
+.landing-logo:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 14px 30px rgba(2,8,23,0.18)}
+.landing-logo svg:hover{transform:scale(1.03)}
+
+@keyframes pop{
+	0%{transform:scale(.7);opacity:0}
+	70%{transform:scale(1.03);opacity:1}
+ 100%{transform:scale(1)}
+}
+
+@keyframes float{
+	0%{transform:translateY(0)}
+ 50%{transform:translateY(-6px)}
+ 100%{transform:translateY(0)}
+}
+.landing-card h1{margin:0 0 6px 0}
+.landing-card p{margin:0 0 12px 0;color:rgba(5,34,58,0.7)}
+.landing-card .btn{padding:12px 18px}
+.landing-card .btn.secondary{background:rgba(2,8,23,0.06);color:var(--text)}
+
+/* Auth stage: animate landing -> signin */
+.auth-stage{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center}
+.auth-panel{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:820px;max-width:94%;transition:opacity .45s ease,transform .45s ease;}
+.auth-panel.hidden{opacity:0;transform:translate(-50%,-40%);pointer-events:none}
+.auth-panel.visible{opacity:1;transform:translate(-50%,-50%);pointer-events:auto}
+.auth-panel .landing-card, .auth-panel .signin-card{width:100%}
+
+/* Make landing panel truly full-screen when visible */
+.auth-panel.landing-panel.visible{position:fixed;left:0;top:0;right:0;bottom:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:40px;transform:none;z-index:9999}
+.auth-panel.landing-panel.hidden{position:absolute}
+.auth-panel.landing-panel .landing-card{max-width:920px}
+
+/* Home pattern: dark-blue with subtle diagonal stripe overlay */
+.home-hero{
+	min-height:calc(100vh - 40px);
+	background: linear-gradient(180deg,var(--bg),#02112a);
+	background-image: linear-gradient(135deg, rgba(0,0,0,0.03) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.03) 50%, rgba(0,0,0,0.03) 75%, transparent 75%, transparent), linear-gradient(90deg, rgba(0,0,0,0.02), rgba(0,0,0,0.02));
+	background-size: 28px 28px, 100% 100%;
+	padding:28px 0;
+}
+
+/* Small tweaks to ensure readable inputs inside the sign-in card */
+.signin-card .field input, .signin-card .field select{
+	background:var(--input-bg);
+	padding:12px 14px;border-radius:12px;color:var(--input-text);
+	border:2px solid rgba(255,255,255,0.92);box-shadow: inset 0 -6px 12px rgba(0,0,0,0.12);
+}
+.signin-card .btn{border-radius:10px}
+
+/* ensure inputs look light on the cream card but page background stays dark */
+.signin-card .field input, .signin-card .field select{background:var(--card);padding:12px;border-radius:10px;color:var(--text);border:1px solid #efe6dd}
+
+/* If sidebar is removed, ensure main area fills available space */
+.sidebar{display:none !important}
+.main-area{margin-left:0;padding-left:0}
+
+/* Header and Footer styles */
+.site-header{background:linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));backdrop-filter:blur(4px);padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+.site-footer{background:transparent;padding:16px 0;border-top:1px solid rgba(255,255,255,0.02);margin-top:28px}
+.site-nav .nav-link{margin-left:14px;color:var(--muted);text-decoration:none}
+.site-nav .nav-link:hover{color:var(--card);text-decoration:underline}
+
+/* Button hover and focus styles */
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(2,8,23,0.12);transition:all .18s ease}
+.btn:active{transform:translateY(0)}
+.btn:focus{outline:2px solid rgba(43,107,230,0.18);outline-offset:2px}
+
+.nav-link, .link{transition:color .12s ease}
+.link:hover{color:#ffffff;text-decoration:underline}
