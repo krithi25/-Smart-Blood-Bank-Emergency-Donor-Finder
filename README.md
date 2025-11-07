@@ -6,7 +6,6 @@ This backend provides a small REST API backed by SQLite for the Blood Donation S
 Quick start (Windows PowerShell):
 
 ```powershell
-cd "c:/Users/krithika/Downloads/BLOOD_DONATION_SYSTEM/BACKEND"
 npm install
 npm run dev   # or npm start
 ```
